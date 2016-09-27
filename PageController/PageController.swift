@@ -189,7 +189,7 @@ extension PageController {
             let to = NSArray(array: viewControllers).indexOfObject(viewController)
 
             if viewController != visibleViewController {
-                move(from: from, to: to)
+                move(from, to: to)
                 return
             }
 
@@ -202,7 +202,7 @@ extension PageController {
         }
     }
 
-    func move(from from: Int, to: Int) {
+    func move(from: Int, to: Int) {
 
         let width = scrollView.frame.width
         if scrollView.contentOffset.x > width * 1.5 {
